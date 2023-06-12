@@ -1,0 +1,6 @@
+// Write C code here
+    // float *arregloDinamico;
+    //arregloDinamico = (float*) malloc(sizeof(float)*10);
+    //arregloDinamico[0] = 45;
+    //printf("%f\n", arregloDinamico[0]);
+    //free(arregloDinamico);
