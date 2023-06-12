@@ -1,0 +1,28 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int i,j;
+   double **arregloDinamico;
+    arregloDinamico= (double**) malloc(sizeof(double*)*100);
+    for(i=0;i<=100;i++){
+    arregloDinamico[i] = (double*) malloc(sizeof(double)*100);
+    }
+    for(i=0;i<=100;i++){
+        for(j=0;j<=100;j++){
+              arregloDinamico[i][i]=1;
+        }
+    }
+ for(i=0;i<=100;i++){
+        for(j=0;j<=100;j++){
+         printf("%f\n", arregloDinamico[i][j]);
+        }
+        printf("\n");
+ }
+ for(i=0;i<=100;i++){
+      free(arregloDinamico[i]);
+ }
+  free(arregloDinamico);
+
+    return 0;
+}
