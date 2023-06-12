@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    int i,j,cantAlumnos;
+    char cadena[50],alumnos[100][50];
+    
+    printf("Introduce la cantidad de alumnos del grupo:   ");
+    scanf("%d%*c",&cantAlumnos);
+    
+    for(i=0; i<cantAlumnos; i++){
+        printf("introduce el nombre del alumno %d :", i+1);
+        scanf("[^\n]%*c", cadena);
+        strcpy(alumnos[i],cadena);
+    }
+    for(i=0;i<cantAlumnos;i++){
+        printf("Alumno %d: %s\n",i+1,alumnos[i]);
+    }
+
+    return 0;
+}
